@@ -1,0 +1,11 @@
+html, body, #root { height: 100%; margin: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif; }
+
+.aics-highlight-row > td {
+  background-color: #fffbe6 !important;
+  animation: aics-highlight-pulse 2.4s ease-out 1;
+}
+@keyframes aics-highlight-pulse {
+  0%   { background-color: #fff1b8; }
+  100% { background-color: #fffbe6; }
+}
