@@ -358,3 +358,58 @@ export const csAgentMappingApi = {
   replaceDocuments: (agentId: number, ids: number[]) =>
     http.put<any, CsAgentDocumentMappingItem[]>(`/admin/cs-agents/${agentId}/documents`, { ids }),
 };
+
+// P005 F003 企微消息审计
+export interface WecomMessageListItem {
+  id: number;
+  createdAt: string;
+  wecomAppId?: number | null;
+  wecomAppName?: string | null;
+  chatId: string;
+  fromUserid?: string;
+  msgType: string;
+  contentPreview?: string;
+  verifyStatus: 'VERIFIED' | 'REJECTED' | 'UNKNOWN';
+  mentionedBot?: boolean;
+}
+
+export interface WecomMessageDetail {
+  id: number;
+  tenantId: number;
+  wecomAppId?: number | null;
+  wecomApp?: { id: number; name: string; corpId: string; agentId: number } | null;
+  csAgent?: { id: number; name: string; code: string } | null;
+  msgId: string;
+  chatId: string;
+  fromUserid?: string;
+  fromName?: string;
+  msgType: string;
+  content?: string;
+  mentionedList?: string[];
+  verifyStatus: 'VERIFIED' | 'REJECTED' | 'UNKNOWN';
+  raw?: string;
+  encryptedPayload?: string;
+  msgSignature?: string;
+  timestamp?: string;
+  nonce?: string;
+  createdAt: string;
+  linkedSessionMsgId?: number | null;
+}
+
+export interface WecomMessageQuery {
+  wecomAppId?: number;
+  chatId?: string;
+  fromUserid?: string;
+  msgType?: string;
+  from?: string;
+  to?: string;
+  mentionBotOnly?: boolean;
+  page?: number;
+  size?: number;
+}
+
+export const wecomMessageApi = {
+  list: (params: WecomMessageQuery) =>
+    http.get<any, Page<WecomMessageListItem>>('/admin/wecom-messages', { params }),
+  detail: (id: number) => http.get<any, WecomMessageDetail>(`/admin/wecom-messages/${id}`),
+};

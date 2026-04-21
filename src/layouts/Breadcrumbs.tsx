@@ -16,6 +16,7 @@ const TRAILS: Record<string, Trail> = {
   '/cs-agents': { group: '智能客服', leaf: '智能客服', path: '/cs-agents' },
   '/wecom-apps': { group: '智能客服', leaf: '企微应用', path: '/wecom-apps' },
   '/sessions': { group: '对话与客服', leaf: '会话审计', path: '/sessions' },
+  '/wecom-messages': { group: '对话与客服', leaf: '企微消息', path: '/wecom-messages' },
   '/handoff': { group: '对话与客服', leaf: '人工转接', path: '/handoff' },
   '/group-mapping': { group: '对话与客服', leaf: '群映射', path: '/group-mapping' },
   '/sensitive': { group: '安全与合规', leaf: '敏感词', path: '/sensitive' },

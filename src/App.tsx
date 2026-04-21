@@ -15,6 +15,7 @@ import LlmConfigPage from './pages/LlmConfig';
 import KbPlaygroundPage from './pages/KbPlayground';
 import WecomAppsPage from './pages/WecomApps';
 import CsAgentsPage from './pages/CsAgents';
+import WecomMessagesPage from './pages/WecomMessages';
 import ChangePasswordPage from './pages/ChangePassword';
 import { useAuth } from './store/auth';
 
@@ -57,6 +58,7 @@ export default function App() {
         <Route path="cs-agents" element={<CsAgentsPage />} />
         <Route path="llm-config" element={<LlmConfigPage />} />
         <Route path="sessions" element={<SessionsPage />} />
+        <Route path="wecom-messages" element={<WecomMessagesPage />} />
         <Route path="handoff" element={<HandoffPage />} />
         <Route path="sensitive" element={<SensitivePage />} />
         <Route path="users" element={<UsersPage />} />

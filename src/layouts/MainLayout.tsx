@@ -69,6 +69,7 @@ const GROUPS: Group[] = [
     icon: <CommentOutlined />,
     children: [
       { key: '/sessions', label: '会话审计', icon: <MessageOutlined />, perm: 'audit:session:read' },
+      { key: '/wecom-messages', label: '企微消息', icon: <WechatOutlined />, perm: 'msg:wecom:read' },
       { key: '/handoff', label: '人工转接', icon: <SolutionOutlined />, perm: 'handoff:manage' },
       { key: '/group-mapping', label: '群映射', icon: <ClusterOutlined />, perm: 'group:manage' },
     ],
