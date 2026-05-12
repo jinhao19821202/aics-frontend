@@ -2,11 +2,29 @@
 .login-wrap {
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   background: linear-gradient(135deg, #E7E9F7 0%, #D7DCF2 100%);
   padding: 24px;
   box-sizing: border-box;
+}
+
+.login-footer {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #6E72A1;
+  text-align: center;
+}
+
+.login-footer a {
+  color: #6E72A1;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.login-footer a:hover {
+  color: #3AD6BF;
 }
 
 .login-card {

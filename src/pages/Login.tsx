@@ -194,6 +194,15 @@ export default function LoginPage() {
           </div>
         </section>
       </div>
+      <footer className="login-footer">
+        <a
+          href="https://beian.miit.gov.cn"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          浙ICP备2026009533号-1
+        </a>
+      </footer>
     </div>
   );
 }
